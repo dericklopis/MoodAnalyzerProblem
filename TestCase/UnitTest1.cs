@@ -1,11 +1,16 @@
 namespace TestCase
 {
     [TestClass]
-    public class UnitTest1
+    public class MoodTester
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestHappyOrSad()
         {
+            MoodAnalyzerProblem.MoodAnalyzer objMood = new MoodAnalyzerProblem.MoodAnalyzer("Happy"); // Arrange
+
+            string result = objMood.AnalyzeMood(); // Act
+
+            Assert.AreEqual("Happy".ToUpper(), result); //Assert
         }
     }
 }
